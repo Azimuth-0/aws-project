@@ -16,7 +16,7 @@ export const Footer: React.FunctionComponent = (): ReactElement => {
                 </div>
                 <div className='text-white flex flex-row p-2 justify-between items-center'>
                     <a className='h-12 w-12 flex m-2' href='https://twitter.com/Senor_Rata'><img className='' src={twitter} /></a>
-                    <a className='h-12 w-12 flex m-2' href='https://twitter.com/Senor_Rata'><img className='' src={instagram} /></a>
+                    <a className='h-12 w-12 flex m-2' href='https://www.instagram.com/sandalai_lama/'><img className='' src={instagram} /></a>
                 </div>
 
             </div>
