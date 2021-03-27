@@ -32,7 +32,7 @@ function App() {
       
       <div className='flex flex-col h-1/2'>
         <Header/>
-        <div className='flex justify-center'>
+        <div className='flex justify-center mt-16'>
           <h1 className='w-1/2 full border border-white text-5xl rounded-lg p-5 bg-gradient-to-r from-green-400 to-blue-500 m-10 text-white'>
             {joke ? joke.joke : ''}
           </h1>
