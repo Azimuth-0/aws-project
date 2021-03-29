@@ -1,10 +1,5 @@
 import React, { ReactElement } from 'react';
-import logo from '../assets/images/s-logo.svg';
 import twitter from '../assets/images/twitter-logo-gradient.svg';
-import instagram from '../assets/images/Instagram_Glyph_Gradient_RGB.png';
-
-
-
 
 export const Footer: React.FunctionComponent = (): ReactElement => {
     return (
@@ -14,7 +9,7 @@ export const Footer: React.FunctionComponent = (): ReactElement => {
                     <div className='text-white whitespace-nowrap'>Don't steal my stuff © {new Date().getFullYear()}</div>
                 </div>
                 <div className='text-white flex flex-row p-2 justify-between items-center'>
-                    <a className='h-12 w-12 flex m-2' href='https://twitter.com/Senor_Rata'><img className='' src={twitter} /></a>
+                    <a className='h-12 w-12 flex m-2' href='https://twitter.com/Senor_Rata'><img className='' src={twitter} alt=''/></a>
                 </div>
 
             </div>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import Footer from './Footer/Footer';
@@ -10,7 +10,7 @@ function App() {
 
   let url = `https://v2.jokeapi.dev/joke/Any${safeMode ? `?safe-mode` : ``}`;
 
-  const getJoke = () => {
+  const getJoke = useCallback(() => {
     axios.get(url)
       .then(response => {
         if (response.data.type === 'single') {
@@ -18,20 +18,18 @@ function App() {
         } else {
           setJoke({ joke: response.data.setup, punchLine: response.data.delivery, type: response.data.type });
         }
-      }).catch(error => {
-
       });
-  }
+  }, [url]);
 
   useEffect(() => {
     getJoke();
-  }, []);
+  }, [getJoke]);
 
   return (
     <div className="App bg-gray-900 h-screen">
-      
+
       <div className='flex flex-col h-1/2'>
-        <Header/>
+        <Header />
         <div className='flex justify-center mt-16'>
           <h1 className='w-1/2 full border border-white text-5xl rounded-lg p-5 bg-gradient-to-r from-green-400 to-blue-500 m-10 text-white'>
             {joke ? joke.joke : ''}
